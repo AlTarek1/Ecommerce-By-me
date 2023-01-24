@@ -56,6 +56,6 @@ products.addEventListener("click", (e) => {
     let val =
       "?param1=" + e.path[1].dataset.name + "&param2=" + e.path[1].dataset.num;
     //   console.log(val);
-    window.location.href = "../EcommerCe-Js/pages/product.html" + val;
+    window.location.href = "./pages/product.html" + val;
   }
 });
