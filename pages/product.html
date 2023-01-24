@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Cairo Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS FIle  -->
+    <link rel="stylesheet" href="../css/product.css" />
+    <script defer type="module" src="../js/product.js"></script>
+    <!-- Font Awesome  -->
+
+    <script
+      src="https://kit.fontawesome.com/d72e93fa06.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product</title>
+  </head>
+  <body>
+    <!-- Nav  -->
+    <nav class="nav-head">
+      <a href="../index.html">YTF HeadPhones</a>
+      <div class="icon">
+        <span class="num-products">0</span>
+        <i class="fa-solid fa-cart-shopping" id="menu"></i>
+      </div>
+    </nav>
+    <!-- Cart  -->
+    <div class="cart-wrapper display-none">
+      <div class="cart">
+        <div class="cart-header">
+          <i class="fa-solid fa-x" id="xmenu"></i>
+          <p>Your Cart</p>
+          <p>(<span id="items">0</span> items)</p>
+        </div>
+        <div class="products-cart"></div>
+        <footer class="sub-total">
+          <div class="total">
+            <p>Subtotal:</p>
+            <p>99$</p>
+          </div>
+          <a href="#">Pay With Card</a>
+        </footer>
+      </div>
+    </div>
+    <section class="product-info" id="product_info">
+      <!-- <div class="image">
+        <img src="../assets/earphones_a_1.webp" alt="" />
+        <div class="small-img">
+          <img class="active-img" src="../assets/earphones_a_1.webp" alt="" />
+          <img src="../assets/earphones_a_1.webp" alt="" />
+          <img src="../assets/earphones_a_1.webp" alt="" />
+        </div>
+      </div> -->
+      <div class="info">
+        <h1>Earphones</h1>
+        <div class="ratings">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i> <span>(20)</span>
+        </div>
+        <h3>Details:</h3>
+        <p>Great Headphone</p>
+        <p>$99</p>
+        <div class="quantity">
+          <p>Quantity:</p>
+          <div class="chnge">
+            <i class="fa-solid fa-minus" id="minus"></i>
+            <p id="currentQunt">1</p>
+            <i class="fa-solid fa-plus" id="plus"></i>
+          </div>
+        </div>
+        <div class="buy">
+          <a href="#" id="addToCart">Add To Cart</a>
+          <a href="#">Buy Now</a>
+        </div>
+      </div>
+    </section>
+    <main>
+      <h1>You May Also Like</h1>
+      <div class="gallery">
+        <div class="products-show"></div>
+      </div>
+    </main>
+    <!-- Footer  -->
+    <footer>
+      <div class="foot">
+        <p>2022 YTF Headphones All rights reserverd</p>
+        <div class="icons">
+          <i class="fa-brands fa-instagram"></i
+          ><i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
