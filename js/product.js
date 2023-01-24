@@ -183,6 +183,6 @@ productsTo.addEventListener("click", (e) => {
     let val =
       "?param1=" + e.path[1].dataset.name + "&param2=" + e.path[1].dataset.i;
     //   console.log(val);
-    window.location.href = "../pages/product.html" + val;
+    window.location.href = "product.html" + val;
   }
 });
