@@ -52,7 +52,7 @@ xmenuIcon.addEventListener("click", (e) => {
 
 products.addEventListener("click", (e) => {
   console.log(e.path[1].dataset);
-  if (e.path[1].dataset?.name && e.path[1].dataset?.num >= 0) {
+  if (e.path[1].dataset?.name && e.path[1].dataset?.num) {
     let val =
       "?param1=" + e.path[1].dataset.name + "&param2=" + e.path[1].dataset.num;
     //   console.log(val);
