@@ -6,27 +6,7 @@ const xmenuIcon = document.querySelector("#xmenu");
 const cart = document.querySelector(".cart-wrapper");
 const numberoFProducts = document.querySelector(".num-products");
 
-let ProductsCart = [
-  [0, 0, 0, 0], //EarPhones 1 Frequency array
-  [0, 0, 0, 0], //EarPhones 2 Frequency array
-  [0, 0, 0, 0], //EarPhones 3 Frequency array
-  [0, 0, 0, 0], //EarPhones 4 Frequency array
-  [0, 0, 0, 0], //HeadPhones 1 Frequency array
-  [0, 0, 0, 0], //HeadPhones 2 Frequency array
-  [0, 0, 0, 0], //HeadPhones 3 Frequency array
-  [0, 0, 0, 0], //HeadPhones 4 Frequency array
-  [0, 0, 0, 0], //Speaker Frequency array
-  [0, 0, 0, 0], //Watch Frequency array
-];
-let Num = 0;
-ProductsCart.forEach((e) => {
-  e.forEach((ele) => {
-    Num += ele > 0;
-  });
-});
-// console.log(Num);
-
-numberoFProducts.textContent = `${Num}`;
+let ProductsCart = [];
 
 data.forEach((e) => {
   for (let i = 0; i < e.imgs.length; i++) {
@@ -51,11 +31,11 @@ xmenuIcon.addEventListener("click", (e) => {
 });
 
 products.addEventListener("click", (e) => {
-  console.log(e.path[1].dataset);
-  if (e.path[1].dataset?.name && e.path[1].dataset?.num) {
+
+  if (e.target.closest(".product") ) {
     let val =
-      "?param1=" + e.path[1].dataset.name + "&param2=" + e.path[1].dataset.num;
+      "?param1=" +e.target.closest(".product").dataset.name + "&param2=" + e.target.closest(".product").dataset.num;
     //   console.log(val);
-    window.location.href = "./pages/product.html" + val;
+    window.location.href = "./../pages/product.html" + val;
   }
 });
