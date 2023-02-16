@@ -8,11 +8,10 @@ dataUrl = dataUrl
   .map((e) => {
     return e.split("=")[1].trim();
   });
-console.log(dataUrl);
 
 const cart = document.querySelector(".cart-wrapper");
 const productscart = document.querySelector(".products-cart");
-const menuIcon = document.querySelector("#menu");
+const menuIcon = document.querySelector(".icon");
 const xmenuIcon = document.querySelector("#xmenu");
 const productInfo = document.querySelector("#product_info");
 const numberoFProducts = document.querySelector(".num-products");
@@ -151,19 +150,17 @@ plus.addEventListener("click", () => {
   document.querySelector("#currentQunt").innerText = currentQuantity;
 });
 productscart.addEventListener("click", (e) => {
-  if (e.path[0].classList.contains("fa-plus")) {
+  if (e.target.closest(".fa-plus")) {
     let p = e.target.previousElementSibling;
     ProductsCart[p.dataset.i][p.dataset.j]++;
-    renderCart();
-  } else if (e.path[0].classList.contains("fa-minus")) {
+  } else if (e.target.closest(".fa-minus")) {
     let p = e.target.nextElementSibling;
     ProductsCart[p.dataset.i][p.dataset.j]--;
-    renderCart();
-  } else if (e.path[0].classList.contains("fa-circle-xmark")) {
-    let p = e.path[1].previousElementSibling.children[1].children[1];
+  } else if (e.target.closest(".fa-circle-xmark"  )) {
+    let p = e.target.closest(".product").children[1].children[1].children[1];
     ProductsCart[p.dataset.i][p.dataset.j] = 0;
-    renderCart();
-  }
+  }    renderCart();
+
 });
 
 const showImg = document.querySelectorAll(".show-img");
@@ -179,10 +176,10 @@ showImg.forEach((e) =>
 
 productsTo.addEventListener("click", (e) => {
   //   console.log(e);
-  if (e.path[1].dataset?.name && e.path[1].dataset?.i) {
+  if (e.target.closest(".productTo")) {
     let val =
-      "?param1=" + e.path[1].dataset.name + "&param2=" + e.path[1].dataset.i;
+      "?param1=" + e.target.closest(".productTo").dataset.name + "&param2=" +e.target.closest(".productTo").dataset.i;
     //   console.log(val);
-    window.location.href = "product.html" + val;
+    window.location.href = "../pages/product.html" + val;
   }
 });
